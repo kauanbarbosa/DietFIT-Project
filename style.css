@@ -1,0 +1,990 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('./fonts/Oswald-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(238, 238, 238);
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    background-color: darkolivegreen;
+    padding: 0px;
+    cursor: pointer;
+    height: 150px;
+}
+
+.options-header {
+    background-color: greenyellow;
+}
+
+.botao-header-inicio {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+    transition: all 0.3s ease;
+}
+
+.botao-header-inicio:hover {
+    color: rgb(84, 121, 29);
+}
+
+.botao-header-calculadoras {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 819px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.botao-header-calculadoras:hover {
+    color: rgb(84, 121, 29);
+}
+
+.botao-header-cadastro {
+    padding-right: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 646px;
+    border-right: solid 1px white;
+    transition: all 0.3s ease;
+}
+
+.botao-header-cadastro:hover {
+    color: rgb(84, 121, 29);
+}
+
+.botao-header-login {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.botao-header-login:hover {
+    color: rgb(84, 121, 29);
+}
+
+
+footer {
+    height: 150px;
+    background-color: darkolivegreen;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-index {
+    margin-top: 50px;
+}
+
+.footer-calculadoras {
+    margin-top: 500px;
+}
+
+.footer-cadastro {
+    margin-top: 282px;
+}
+
+.footer-login {
+    margin-top: 282px;
+}
+
+.footer-dados {
+    margin-top: 232px;
+}
+
+.logo-footer {
+    position: absolute;
+    height: 5%;
+    left: 1700px;
+}
+
+.atribuicao {
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.botao-footer-inicio {
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.botao-footer-calculadoras {
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.botao-footer-cadastro {
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.botao-footer-login {
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.texto-painel1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: absolute;
+    height: 690px;
+    width: 100%;
+    color: white;
+}
+
+.titulo-painel1-1 {
+    text-align: center;
+    height: 50px;
+    width: 49%;
+    margin-top: 50px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.texto-painel1-1 {
+    top: 30%;
+    left: 0%;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    width: 49%;
+    height: 150px;
+}
+
+.texto-painel1-2 {
+    top: 30%;
+    left: 50%;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    width: 49%;
+    height: 150px;
+}
+
+.texto-painel1-3 {
+    top: 55%;
+    left: 0;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    width: 49%;
+    height: 150px;
+}
+
+
+.texto-painel1-4 {
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    width: 49%;
+    height: 150px;
+}
+
+.logo-header img {
+    height: 100px;
+}
+
+.painel-1 {
+    background-image: url("./imgs/fundo-painel1.png");
+    display: flex;
+    height: 820px;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+
+.calculadora {
+    width: 150px;
+    color: white;
+    background-color: greenyellow;
+    border: 0;
+    border-radius: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 20px;
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+.calculadora:hover {
+    transform: scale(1.1);
+    border: solid 2px green;
+}
+
+.botao-cadastro {
+    margin-bottom: 300px;
+    height: 85px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    background-color: greenyellow;
+    border: 0;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+    box-shadow: 0 4px 20px 0 rgb(0,0,0,0.3);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.botao-cadastro:hover {
+    transform: scale(1.08);
+    border: solid 2px green;
+}
+
+.botao-calculadoras {
+    margin-bottom: 100px;
+    height: 85px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    background-color: greenyellow;
+    border: 0;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+    box-shadow: 0 4px 20px 0 rgb(0,0,0,0.3);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+.botao-calculadoras:hover {
+    transform: scale(1.08);
+    border: solid 2px green;
+}
+
+.botao-montar-dieta {
+    margin-bottom: 60px;
+    height: 85px;
+    width: 250px;
+    text-align: center;
+    color: white;
+    background-color: greenyellow;
+    border: 0;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+    box-shadow: 0 4px 20px 0 rgb(0,0,0,0.3);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+.botao-montar-dieta:hover {
+    transform: scale(1.08);
+    border: solid 2px green;
+}
+
+.botao-realizar-login {
+    margin-bottom: 300px;
+    height: 85px;
+    width: 250px;
+    text-align: center;
+    color: white;
+    background-color: greenyellow;
+    border: 0;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+    box-shadow: 0 4px 20px 0 rgb(0,0,0,0.3);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.botao-realizar-login:hover {
+    transform: scale(1.08);
+    border: solid 2px green;
+}
+
+
+.oculto {
+    display: none;
+}
+
+.botao-calcular {
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    border: 0;
+    background-color: greenyellow;
+    cursor: pointer;
+    font-size: 15px;    
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.botao-calcular:hover{
+    border: solid 2px rgb(87, 126, 30);
+}
+
+.botao-calcular:focus {
+    outline: 0;
+}
+
+.flex-container {
+    position: absolute;
+    top: 250px;
+    left: 515px;
+    width: 600px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: white;
+    margin-top: 500px;
+    margin-left: 73px;
+}
+
+.flex-container .calculadoras{
+    width: 10px;
+}
+
+input:focus {
+    box-shadow: 0;
+    outline: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.flex-container2 {
+    border: solid 1px rgb(185, 185, 185);
+    margin-left: 38%;
+    height: 240px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    box-shadow: 0 2px 10px 0 rgb(0,0,0,0.2);
+}
+
+.flex-container2 input {
+    margin: 10px;
+    background-color: rgb(238, 238, 238);
+}
+
+.resultado {
+    position:absolute;
+    top: 100%;
+    left: 30%;
+    color:darkgreen;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.flex-container3 {
+    border: solid 1px rgb(185, 185, 185);
+    margin-left: 38%;
+    width: 500px;
+    min-height: 94px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    box-shadow: 0 2px 10px 0 rgb(0,0,0,0.2);
+}
+
+.flex-container3 input {
+    background-color: rgb(238, 238, 238);
+}
+
+.flex-container3 span {
+    font-weight: bold;
+    position: relative;
+    top: 0%;
+    padding-bottom: 10px;
+}
+
+.flex-container3 img {
+    height: 70%;
+    width: 70%;
+    margin: 30px;
+}
+
+
+
+.botao-calcularBF {
+    position: relative;
+    color: white;
+    font-weight: bold;
+    background-color: yellowgreen;
+    border: 0;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tabelaM {
+    margin: 30px;
+}
+
+
+.cadastro {
+    margin-top: 200px;
+    margin-left: 33%;
+    margin-right: 33%;
+    width: 34%;
+    height: 300px;
+    border-radius: 25px;
+    border: solid 1px grey;
+    background-color: rgba(230, 230, 230, 0.644);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 0 1px 5px 0 rgb(0,0,0,0.3);
+}
+
+.login {
+    margin-top: 200px;
+    margin-left: 33%;
+    margin-right: 33%;
+    width: 34%;
+    height: 300px;
+    border-radius: 25px;
+    border: solid 1px white;
+    background-color: rgba(0, 0, 0, 0.644);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 0 1px 5px 0 rgb(0,0,0,0.3);
+}
+
+.cadastro-email {
+    font-size: 20px;
+    align-self: flex-start;
+    margin-left: 80px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 250px;
+    border: 0;
+    background: none;
+    border-bottom: solid 1px black;
+    transition: all 0.2s ease;
+}
+
+.cadastro-email:focus {
+    padding-bottom: 3px;
+}
+
+.login-email {
+    font-size: 20px;
+    align-self: flex-start;
+    margin-left: 80px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 250px;
+    border: 0;
+    background: none;
+    border-bottom: solid 1px white;
+    transition: all 0.2s ease;
+    color: white;
+}
+
+.login-email:focus {
+    padding-bottom: 3px;
+}
+
+.cadastro-senha {
+    font-size: 20px;
+    align-self: flex-start;
+    margin-left: 80px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    width: 250px;
+    border: 0;
+    background: none;
+    border-bottom: solid 1px black;
+    transition: all 0.2s ease;
+}
+
+.cadastro-senha:focus {
+    padding-bottom: 3px;
+}
+
+.login-senha {
+    font-size: 20px;
+    align-self: flex-start;
+    margin-left: 80px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    width: 250px;
+    border: 0;
+    background: none;
+    border-bottom: solid 1px white;
+    transition: all 0.2s ease;
+    color: white;
+}
+
+.login-senha:focus {
+    padding-bottom: 3px;
+}
+
+
+.realizar-cadastro {
+    top: 58%;
+    left: 38%;
+    position: absolute;
+    color: black;
+    background-color: rgb(96, 197, 96);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 30px;
+    border: solid 2px rgb(96,197,96);
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.realizar-login {
+    top: 58%;
+    left: 39%;
+    position: absolute;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 30px;
+    border: solid 2px rgb(255, 255, 255);
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.realizar-login:hover {
+    border: solid 2px rgb(95, 158, 0);
+    color: rgb(95, 158, 0);
+}
+
+.exibirSenha {
+    position: absolute;
+    height: 12px;
+    top: 49%;
+    left: 49.6%;
+    border: 0;
+    background: 0;
+    cursor: pointer;
+    color: red;
+}
+
+.exibirSenha-login {
+    position: absolute;
+    height: 12px;
+    top: 49%;
+    left: 49.6%;
+    border: 0;
+    background: 0;
+    cursor: pointer;
+    color: red;
+}
+
+.exibirSenha-login img {
+    filter: invert(100%);
+}
+
+
+.realizar-cadastro:hover {
+    border: solid 2px darkgreen;
+    color: white;
+}
+
+.usuario-imagem {
+    border: solid 1px rgba(128, 128, 128, 0.616);
+    padding: 30px;
+    border-radius: 25px;
+    height: 60%;
+    margin-top: -89px;
+    margin-left: 65%;
+}
+
+.login-imagem {
+    border: solid 1px rgba(255, 255, 255, 0.616);
+    padding: 30px;
+    border-radius: 25px;
+    height: 60%;
+    margin-top: -89px;
+    margin-left: 65%;
+}
+
+.funcoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 640px;
+    margin-top: 50px;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 2px 10px 0 rgb(0,0,0,0.2);
+}
+
+.outras-funcoes {
+    width: 100%;
+    color:rgb(160, 233, 112);
+    font-weight: bolder;   
+    font-size: 180px;
+    text-align: center;
+}
+
+.fundo-cadastro {
+    height: 100%;
+    top: 0px;
+    width: 100%;
+    position: absolute;
+    z-index: -100;
+}
+
+.fundo-login {
+    height: 100%;
+    top: 0px;
+    width: 100%;
+    position: absolute;
+    z-index: -100;
+}
+
+.dados {
+    width: 900px;
+    border: solid 2px gray;
+    background-color: white;
+    box-shadow: 0 4px 20px 0 rgb(0,0,0,0.2);
+    border-radius: 25px;
+    height: 900px;
+    margin-left: 510px;
+    margin-top: 60px;
+}
+
+.opcao-sexoM,.opcao-sexoF{
+    display: none;
+}
+
+.masculino-imagem {
+    position: absolute;
+    top: 270px;
+    left: 770px;
+    height: 15%;
+    cursor: pointer;
+}
+
+
+
+.feminino-imagem {
+    position: absolute;
+    top: 270px;
+    left: 1000px;
+    height: 15%;
+    cursor: pointer;
+}
+
+.peso {
+    position: absolute;
+    border: none;
+    border-bottom: solid 1px black;
+    font-size: 20px;
+    background: none;
+    margin-top: 280px;
+    margin-left: 170px;
+    transition: all 0.2s ease;
+}
+
+.altura {
+    position: absolute;
+    border : none;
+    border-bottom: solid 1px black;
+    font-size: 20px;
+    background: none;
+    margin-top: 280px;
+    margin-left: 540px;
+}
+
+
+.cinturaBF {
+    position: absolute;
+    border: none;
+    border-bottom: solid 1px black;
+    font-size: 20px;
+    background: none;
+    margin-top: 370px;
+    margin-left: 170px;
+}
+
+.pescocoBF {
+    position: absolute;
+    border: none;
+    border-bottom: solid 1px black;
+    font-size: 20px;
+    background: none;
+    margin-top: 370px;
+    margin-left: 540px;
+}
+
+.quadrilBF {
+    transition: all 0.3s ease-out;
+    position: absolute;
+    border: none;
+    border-bottom: solid 1px black;
+    font-size: 20px;
+    background: none;
+    margin-top: 460px;
+    margin-left: 540px;
+    z-index: 100;
+}
+
+.idade {
+    transition: all 0.3s ease-out;
+    position: absolute;
+    border: none;
+    border-bottom: solid 1px black;
+    font-size: 20px;
+    background: none;
+    margin-top: 460px;
+    margin-left: 170px;
+    z-index: 100;
+}
+
+
+.atividades {
+    color: rgb(80, 80, 80);
+    font-weight: bolder;
+    position: absolute;
+    margin-top: 230px;
+    margin-left: 200px;
+    border: 0;
+}
+
+.painel-receberDados {
+    margin-top: 50px;
+    margin-left: 360px;
+    width: 1200px;
+    height: 500px;  
+    border-radius: 25px;
+    border: solid 1px white;
+    background-color: rgba(255, 255, 255, 0.644);
+    box-shadow: 0 1px 5px 0 rgb(0,0,0,0.3);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.email-painel-dados {
+    color: red;
+    margin-top: 20px;
+    font-size : 20px;
+    text-align: center;
+}
+
+.cpf-painel-dados {
+    position: absolute;
+    background: none;
+    color: black;
+    border: 0;
+    border-bottom: solid 1px white;
+    align-self: flex-start;
+    margin-top: 130px;
+    margin-left: 165px;
+    font-size: 20px;
+}
+
+.nome-painel-dados {
+    position: absolute;
+    background: none;
+    color: black;
+    border: 0;
+    border-bottom: solid 1px white;
+    margin-top: 130px;
+    font-size: 20px;
+}
+
+.idade-painel-dados {
+    position: absolute;
+    background: none;
+    color: black;
+    border: 0;
+    border-bottom: solid 1px white;
+    align-self: flex-end;
+    font-size: 20px;
+    margin-top: 130px;
+    margin-right: 165px;
+}
+
+.peso-painel-dados {
+    position: absolute;
+    background: none;
+    color: black;
+    border: 0;
+    border-bottom: solid 1px white;
+    align-self: flex-start;
+    font-size: 20px;
+    margin-top: 230px;
+    margin-left: 165px;
+}
+
+.altura-painel-dados {
+    position: absolute;
+    background: none;
+    color: black;
+    border: 0;
+    border-bottom: solid 1px white;
+    font-size: 20px;
+    margin-top: 230px;
+}
+
+.pescoco-painel-dados {
+    position: absolute;
+    background: none;
+    color: black;
+    border: 0;
+    border-bottom: solid 1px white;
+    align-self: flex-end;
+    font-size: 20px;
+    margin-top: 230px;
+    margin-right: 165px;
+}
+
+.cintura-painel-dados {
+    position: absolute;
+    background: none;
+    color: black;
+    border: 0;
+    border-bottom: solid 1px white;
+    align-self: flex-start;
+    font-size: 20px;
+    margin-top: 330px;
+    margin-left: 165px;
+}
+
+.quadril-painel-dados {
+    position: absolute;
+    background: none;
+    color: black;
+    border: 0;
+    border-bottom: solid 1px white;
+    font-size: 20px;
+    margin-top: 330px;
+}
+
+.div-opcao-sexo {
+    position: absolute;
+    color:rgb(80, 80, 80);
+    background: none;
+    color: black;
+    border: 0;
+    align-self: flex-end;
+    font-size: 20px;
+    margin-top: 330px;
+    margin-right: 195px;
+}
+
+.div-opcao-sexo select {
+    font-size: 20px;
+    margin-left: 3px;
+    background: none;
+    color: black;
+}
+
+.div-opcao-sexo label {
+    font-size :20px;
+}
+
+.botao-submit-dados {
+    position: absolute;
+    margin-top: 420px;
+    border: solid 2px red;
+    border-radius: 30px;
+    font-size: 20px;
+    background-color: tomato;
+    color: white;
+    padding: 7px;
+    width: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.botao-submit-dados:hover {
+    transform:scale(1.3, 1.1)
+}

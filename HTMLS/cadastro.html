@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../SCRIPTS/cadastro.js"></script>
+    <script src="../SCRIPTS/senha.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>DietFIT</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a class="logo-header" href="../index.html"><img src='../imgs/DietFIT-logo.png'></a>
+    </header>
+    <div class="options-header">
+        <a href="../index.html" class="botao-header-inicio">INÍCIO</a>
+        <a href="./calculadoras.html"class="botao-header-calculadoras">CALCULADORAS</a>
+        <a href="./cadastro.html" class="botao-header-cadastro">CADASTRAR-SE</a>
+        <a href="./login.html" class="botao-header-login">ENTRAR</a>
+    </div>
+
+    <main class="main">
+        <img src="../imgs/cadastro.jpg" class="fundo-cadastro">
+        <span class="oculto" id="id_cadastro"></span>
+        <button class="exibirSenha" onclick="exibirSenha()" id="botao-exibirsenha"><img src="../imgs/eye.png" class="exibirSenha"></button>
+        <form class='cadastro'>
+            <input type="email" class="cadastro-email" id="email-cadastro" placeholder="Email">
+            <input type="password" class="cadastro-senha" id="senha-cadastro" placeholder="Senha">
+            <img src="../imgs/reception.png" class="usuario-imagem">
+        </form>
+        <button class="realizar-cadastro" onclick="realizarCadastro()">Cadastrar</button>
+    </main>
+    <footer class="footer-cadastro">
+        <a href="../index.html" class="botao-footer-inicio">INÍCIO</a>
+        <a href="./calculadoras.html"class="botao-footer-calculadoras">CALCULADORAS</a>
+        <a href="./cadastro.html" class="botao-footer-cadastro">CADASTRAR-SE</a>
+        <a href="./login.html" class="botao-footer-login">ENTRAR</a>
+        <a href="https://www.flaticon.com/br/icones-gratis/esportes-e-competicao" title="esportes e competição ícones" class="atribuicao">ESPORTES E COMPETIÇÃO ÍCONES CRIADOS POR AmethystDesign - Flaticon</a>
+        <img src="../imgs/DietFIT-logo.png" class="logo-footer">
+    </footer>
+    <script>
+        function sorteio() { // gerando um valor aleatório do bilhete 
+            return Math.floor(Math.random() * 999999);
+        }
+        const resultado = sorteio();
+        document.getElementById("id_cadastro").innerHTML = resultado;
+    </script>
+</body>
+
+</html>

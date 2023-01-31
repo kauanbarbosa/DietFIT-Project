@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../SCRIPTS/calculadoras.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>DietFIT</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <a class="logo-header" href="../index.html"><img src='../imgs/DietFIT-logo.png'></a>
+    </header>
+    <div class="options-header">
+        <a href="../index.html" class="botao-header-inicio">INÍCIO</a>
+        <a href="./calculadoras.html"class="botao-header-calculadoras">CALCULADORAS</a>
+        <a href="./cadastro.html" class="botao-header-cadastro">CADASTRAR-SE</a>
+        <a href="./login.html" class="botao-header-login">ENTRAR</a>
+    </div>
+
+    <main class="main">
+        <form class='dados'>
+            <input type="radio" class="opcao-sexoM" id="sexoM" value="Masculino" onclick="exibirBFMasculino()" name="sexo">
+            <label for="sexoM" id='labelsexoM'><img src="../imgs/masculino-selected.png" class="masculino-imagem"></label>
+            <input type="radio" class="opcao-sexoF" id="sexoF" value="Feminino" onclick="exibirBFFeminino()" name="sexo">
+            <label for="sexoF" id='labelsexoF'><img src="../imgs/feminino.png" class="feminino-imagem"></label>
+            <input type="number" class="peso" id="peso" placeholder="Peso (KG)">
+            <input type="number" class="altura" id="altura" placeholder="Altura (CM)">
+            <input type="number" class="cinturaBF" id="cinturaBF" placeholder="Cintura (CM)">
+            <input type="number" class="pescocoBF" id="pescocoBF" placeholder="Pescoço (CM)">
+            <div class="atividades">
+                <label for="atividade">Taxa de atividade :</label>
+                <select name="atividade" id="atividade">
+                    <option value="sedentário">Sedentário (pouco ou nenhum exercício)</option>
+                    <option value="levementeativo">Levemente Ativo (exercício leve 1 a 3 dias por semana)</option>
+                    <option value="moderadamenteativo">Moderadamente Ativo (execício moderado 3 a 5 dias por semana)</option>
+                    <option value="altamenteativo">Altamente ativo (exercício pesado de 5 a 6 dias por semana)</option>
+                    <option value="extremamenteativo">Extremamente ativo (exercício pesado diariamente e até 2 vezes por dia)</option>
+                </select>
+            </div>
+            <input type="number" class="idade" id="idade" placeholder="Idade (Anos)">
+            <input type="number" class="oculto" id="quadrilBF" placeholder="Quadril (CM)">
+            <h1 id="resultado" class="resultado"></h1>
+        </form>
+        <div class="flex-container">
+            <div class="calculadoras">
+                <button onclick="calculoIMC()" class="calculadora" id="calculadoraIMC">IMC</button>
+            </div>
+            <div class="calculadoras">
+                <button onclick="calculoBF()" class="calculadora" id="calculadoraBF">BF</button>
+            </div>
+            <div class="calculadoras">
+                <button onclick="calculoTMB()" class="calculadora" id="calculadoraTMB">TMB</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-calculadoras">
+        <a href="../index.html" class="botao-footer-inicio">INÍCIO</a>
+        <a href="./calculadoras.html"class="botao-footer-calculadoras">CALCULADORAS</a>
+        <a href="./cadastro.html" class="botao-footer-cadastro">CADASTRAR-SE</a>
+        <a href="./login.html" class="botao-footer-login">ENTRAR</a>
+        <a href="https://www.flaticon.com/br/icones-gratis/esportes-e-competicao" title="esportes e competição ícones" class="atribuicao">ESPORTES E COMPETIÇÃO ÍCONES CRIADOS POR AmethystDesign - Flaticon</a>
+        <img src="../imgs/DietFIT-logo.png" class="logo-footer">
+    </footer>
+</body>
+</html>

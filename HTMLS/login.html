@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../SCRIPTS/login.js"></script>
+    <script src="../SCRIPTS/senha.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>DietFIT</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a class="logo-header" href="../index.html"><img src='../imgs/DietFIT-logo.png'></a>
+    </header>
+    <div class="options-header">
+        <a href="../index.html" class="botao-header-inicio">INÍCIO</a>
+        <a href="./calculadoras.html" class="botao-header-calculadoras">CALCULADORAS</a>
+        <a href="./cadastro.html" class="botao-header-cadastro">CADASTRAR-SE</a>
+        <a href="./login.html" class="botao-header-login">ENTRAR</a>
+    </div>
+
+
+    <main class="main">
+        <img src="../imgs/fundo-login.jpg" class="fundo-login">
+        <div id="painel-login">
+            <button class="exibirSenha-login" onclick="exibirSenhaLogin()" id="botao-exibirsenha"><img
+                    src="../imgs/eye.png" class="exibirSenha-login"></button>
+            <form class='login'>
+                <input type="email" class="login-email" id="email-login" placeholder="Email" value="">
+                <input type="password" class="login-senha" id="senha-login" placeholder="Senha" value="">
+                <img src="../imgs/man.png" class="login-imagem">
+            </form>
+            <button class="realizar-login" onclick="verificarLogin()">Logar</button>
+        </div>
+    </main>
+    <footer class="footer-login">
+        <a href="../index.html" class="botao-footer-inicio">INÍCIO</a>
+        <a href="./calculadoras.html" class="botao-footer-calculadoras">CALCULADORAS</a>
+        <a href="./cadastro.html" class="botao-footer-cadastro">CADASTRAR-SE</a>
+        <a href="./login.html" class="botao-footer-login">ENTRAR</a>
+        <a href="https://www.flaticon.com/br/icones-gratis/esportes-e-competicao" title="esportes e competição ícones"
+            class="atribuicao">ESPORTES E COMPETIÇÃO ÍCONES CRIADOS POR AmethystDesign - Flaticon</a>
+        <img src="../imgs/DietFIT-logo.png" class="logo-footer">
+    </footer>
+</body>
+
+</html>
