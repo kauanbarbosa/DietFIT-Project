@@ -157,10 +157,10 @@ async function realizarLogin(req, res) {
         if (dados.length === 0) {
             const resposta = new Dados('null', login.login, 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null')
             return res.status(201).json(resposta)
+        } else {            
+            const sucesso = new Dados(dados[0][0], dados[0][1], dados[0][2], dados[0][3], dados[0][4], dados[0][5], dados[0][6], dados[0][7], dados[0][8], dados[0][9])
+            return res.status(201).json(sucesso)
         }
-        const sucesso = new Comunicado('LBS', 'Login bem sucedido!',
-            'O login foi realizado com sucesso!')
-        return res.status(201).json(sucesso)
     }
     if (resultado === 0) {
         const senhaInvalida = new Comunicado('SI', 'Senha Incorreta',

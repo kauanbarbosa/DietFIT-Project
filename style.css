@@ -16,6 +16,7 @@ body {
 
 .cabecalho {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     margin: 0px;
@@ -26,6 +27,11 @@ body {
 }
 
 .options-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
     background-color: greenyellow;
 }
 
@@ -34,7 +40,7 @@ body {
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    margin-left: 30px;
+    margin-left: 1%;
     transition: all 0.3s ease;
 }
 
@@ -47,8 +53,8 @@ body {
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    margin-left: 819px;
     text-align: center;
+    margin-left: 1%;
     transition: all 0.3s ease;
 }
 
@@ -57,14 +63,14 @@ body {
 }
 
 .botao-header-cadastro {
-    padding-right: 10px;
     color: white;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    margin-left: 646px;
     border-right: solid 1px white;
     transition: all 0.3s ease;
+    margin-left: 75%;
+    padding-right: 1%;
 }
 
 .botao-header-cadastro:hover {
@@ -76,11 +82,24 @@ body {
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    margin-left: 10px;
     transition: all 0.3s ease;
+    margin-left: 1%;
 }
 
 .botao-header-login:hover {
+    color: rgb(84, 121, 29);
+}
+
+.botao-header-usuario {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-left: 80%;
+}
+
+.botao-header-usuario:hover {
     color: rgb(84, 121, 29);
 }
 

@@ -15,6 +15,9 @@ function verificarLogin() {
             if (response.data) {
                 if (response.data.cpf === 'null') {
                     receberDados(response.data.email)
+                } else {
+                    sessionStorage.setItem('_usuario_logado', JSON.stringify(response.data))
+                    window.location.href = "../index.html"
                 }
             }
         })
