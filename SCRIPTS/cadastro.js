@@ -14,7 +14,7 @@ function realizarCadastro() {
                     response.data.mensagem,
                     response.data.descricao)
                 alert(msg.get())
-                window.location.href = "../index.html"
+                window.location.href = "../HTMLS/index.html"
             }
         })
         .catch(error => {

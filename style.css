@@ -30,9 +30,13 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: row;
     background-color: greenyellow;
+}
+
+.options-header a {
+    width: 33%;
 }
 
 .botao-header-inicio {
@@ -40,7 +44,7 @@ body {
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    margin-left: 1%;
+    float: left;
     transition: all 0.3s ease;
 }
 
@@ -53,8 +57,7 @@ body {
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    text-align: center;
-    margin-left: 1%;
+    text-align: left;
     transition: all 0.3s ease;
 }
 
@@ -69,7 +72,7 @@ body {
     font-weight: bold;
     border-right: solid 1px white;
     transition: all 0.3s ease;
-    margin-left: 75%;
+    text-align: right;
     padding-right: 1%;
 }
 
@@ -81,9 +84,11 @@ body {
     color: white;
     text-decoration: none;
     font-size: 20px;
+    width: 16.5%;
     font-weight: bold;
     transition: all 0.3s ease;
-    margin-left: 1%;
+    padding-left: 1%;
+    text-align: left;
 }
 
 .botao-header-login:hover {
@@ -94,6 +99,7 @@ body {
     color: white;
     text-decoration: none;
     font-size: 20px;
+    width: 16.5%;
     font-weight: bold;
     transition: all 0.3s ease;
     margin-left: 80%;
@@ -1006,4 +1012,77 @@ input::-webkit-inner-spin-button {
 
 .botao-submit-dados:hover {
     transform:scale(1.3, 1.1)
+}
+
+.flex-container-perfil {
+    box-shadow: 0 1px 5px 0 rgba(175, 175, 175, 0.3);
+    margin-top: 5%;
+    max-width: 50%;
+    min-width: 20%;
+    margin-left: 25%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    border: solid 1px grey;
+    padding: 50px;
+}
+
+.flex-container-perfil span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 40%;
+}
+
+.cpf-perfil {
+    padding: 10px;
+    border-bottom: solid 1px rgb(201, 201, 201);
+}
+
+.nome-perfil {
+    padding: 10px;
+    border-bottom: solid 1px rgb(201, 201, 201);
+}
+
+.email-perfil {
+    padding: 10px;
+    border-bottom: solid 1px rgb(201, 201, 201);
+}
+
+.idade-perfil {
+    padding: 10px;
+    border-bottom: solid 1px rgb(201, 201, 201);
+}
+
+.peso-perfil {
+    padding: 10px;
+    border-bottom: solid 1px rgb(201, 201, 201);
+}
+
+.altura-perfil {
+    padding: 10px;
+    border-bottom: solid 1px rgb(201, 201, 201);
+}
+
+.pescoco-perfil {
+    padding: 10px;
+    border-bottom: solid 1px rgb(201, 201, 201);
+}
+
+.cintura-perfil {
+    padding: 10px;
+    border-bottom: solid 1px rgb(201, 201, 201);
+}
+
+.quadril-perfil {
+    padding: 10px;
+    border-bottom: solid 1px rgb(201, 201, 201);
+}
+
+.sexo-perfil {
+    padding: 10px;
+    border-bottom: solid 1px rgb(201, 201, 201);
 }

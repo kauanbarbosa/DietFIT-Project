@@ -17,7 +17,7 @@ function verificarLogin() {
                     receberDados(response.data.email)
                 } else {
                     sessionStorage.setItem('_usuario_logado', JSON.stringify(response.data))
-                    window.location.href = "../index.html"
+                    window.location.href = "../HTMLS/index.html"
                 }
             }
         })
@@ -191,7 +191,7 @@ function registrarDados() {
                     response.data.mensagem,
                     response.data.descricao)
                 alert(msg.get())
-                window.location.href = "../index.html"
+                window.location.href = "../HTMLS/index.html"
             })
             .catch(error => {
                 if (error.response) {

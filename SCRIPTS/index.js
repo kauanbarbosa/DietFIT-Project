@@ -16,6 +16,7 @@ function sessaoUsuario() {
 
         const usuario = document.createElement('a')
         usuario.setAttribute('class', 'botao-header-usuario')
+        usuario.setAttribute('href', './perfil.html')
         usuario.innerHTML = `Bem-vindo, ${sessao.nome}`
         div.appendChild(usuario)
     }
