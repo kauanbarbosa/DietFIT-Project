@@ -127,7 +127,7 @@ function calculoTMB() {
     if (quadril.getAttribute('class') === 'oculto') // SEXO MASCULINO
     {
         switch (taxaAtividade) {
-            case 'sedentário': 
+            case 'sedentário':  
                 resultadoTMB = TMBmasculino(1.2, peso, altura, idade)
                 break;
             case 'levementeativo':

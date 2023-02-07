@@ -11,8 +11,9 @@
 }
 
 body {
-    background: rgb(238, 238, 238);
+    background-color: white;
 }
+
 
 .cabecalho {
     display: flex;
@@ -113,7 +114,7 @@ body {
 footer {
     height: 150px;
     background-color: darkolivegreen;
-    display:flex;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
@@ -133,6 +134,10 @@ footer {
 
 .footer-login {
     margin-top: 282px;
+}
+
+.footer-dieta {
+    margin-top: 2%;
 }
 
 .footer-dados {
@@ -303,7 +308,7 @@ footer {
     font-weight: bold;
     cursor: pointer;
     padding: 20px;
-    box-shadow: 0 4px 20px 0 rgb(0,0,0,0.3);
+    box-shadow: 0 4px 20px 0 rgb(0, 0, 0, 0.3);
     transition: all 0.3s ease-out;
     text-decoration: none;
     z-index: 100;
@@ -327,7 +332,7 @@ footer {
     font-weight: bold;
     cursor: pointer;
     padding: 20px;
-    box-shadow: 0 4px 20px 0 rgb(0,0,0,0.3);
+    box-shadow: 0 4px 20px 0 rgb(0, 0, 0, 0.3);
     transition: all 0.3s ease-out;
     text-decoration: none;
 }
@@ -338,11 +343,11 @@ footer {
 }
 
 .botao-montar-dieta {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     height: 85px;
     width: 250px;
-    text-align: center;
     color: white;
+    text-align: center;
     background-color: greenyellow;
     border: 0;
     border-radius: 20px;
@@ -350,7 +355,7 @@ footer {
     font-weight: bold;
     cursor: pointer;
     padding: 20px;
-    box-shadow: 0 4px 20px 0 rgb(0,0,0,0.3);
+    box-shadow: 0 4px 20px 0 rgb(0, 0, 0, 0.3);
     transition: all 0.3s ease-out;
     text-decoration: none;
 }
@@ -359,6 +364,7 @@ footer {
     transform: scale(1.08);
     border: solid 2px green;
 }
+
 
 .botao-realizar-login {
     margin-bottom: 300px;
@@ -373,7 +379,7 @@ footer {
     font-weight: bold;
     cursor: pointer;
     padding: 20px;
-    box-shadow: 0 4px 20px 0 rgb(0,0,0,0.3);
+    box-shadow: 0 4px 20px 0 rgb(0, 0, 0, 0.3);
     transition: all 0.3s ease-out;
     text-decoration: none;
     z-index: 100;
@@ -397,14 +403,14 @@ footer {
     border: 0;
     background-color: greenyellow;
     cursor: pointer;
-    font-size: 15px;    
+    font-size: 15px;
     font-weight: bold;
     border-radius: 25px;
     padding: 10px;
     transition: all 0.3s ease-out;
 }
 
-.botao-calcular:hover{
+.botao-calcular:hover {
     border: solid 2px rgb(87, 126, 30);
 }
 
@@ -420,13 +426,13 @@ footer {
     height: 200px;
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     background-color: white;
     margin-top: 500px;
     margin-left: 73px;
 }
 
-.flex-container .calculadoras{
+.flex-container .calculadoras {
     width: 10px;
 }
 
@@ -451,8 +457,8 @@ input::-webkit-inner-spin-button {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    
-    box-shadow: 0 2px 10px 0 rgb(0,0,0,0.2);
+
+    box-shadow: 0 2px 10px 0 rgb(0, 0, 0, 0.2);
 }
 
 .flex-container2 input {
@@ -461,10 +467,10 @@ input::-webkit-inner-spin-button {
 }
 
 .resultado {
-    position:absolute;
+    position: absolute;
     top: 100%;
     left: 30%;
-    color:darkgreen;
+    color: darkgreen;
     margin: 10px;
     font-size: 30px;
     font-weight: bold;
@@ -480,8 +486,8 @@ input::-webkit-inner-spin-button {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    
-    box-shadow: 0 2px 10px 0 rgb(0,0,0,0.2);
+
+    box-shadow: 0 2px 10px 0 rgb(0, 0, 0, 0.2);
 }
 
 .flex-container3 input {
@@ -536,7 +542,7 @@ input::-webkit-inner-spin-button {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    box-shadow: 0 1px 5px 0 rgb(0,0,0,0.3);
+    box-shadow: 0 1px 5px 0 rgb(0, 0, 0, 0.3);
 }
 
 .login {
@@ -553,7 +559,7 @@ input::-webkit-inner-spin-button {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    box-shadow: 0 1px 5px 0 rgb(0,0,0,0.3);
+    box-shadow: 0 1px 5px 0 rgb(0, 0, 0, 0.3);
 }
 
 .cadastro-email {
@@ -638,7 +644,7 @@ input::-webkit-inner-spin-button {
     padding-bottom: 10px;
     padding-top: 10px;
     border-radius: 30px;
-    border: solid 2px rgb(96,197,96);
+    border: solid 2px rgb(96, 197, 96);
     font-size: 30px;
     cursor: pointer;
     transition: all 0.3s;
@@ -718,19 +724,20 @@ input::-webkit-inner-spin-button {
 
 .funcoes {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
     height: 640px;
     margin-top: 50px;
     background-color: rgb(247, 247, 247);
-    box-shadow: 0 2px 10px 0 rgb(0,0,0,0.2);
+    box-shadow: 0 2px 10px 0 rgb(0, 0, 0, 0.2);
 }
 
 .outras-funcoes {
     width: 100%;
-    color:rgb(160, 233, 112);
-    font-weight: bolder;   
+    color: rgb(160, 233, 112);
+    font-weight: bolder;
     font-size: 180px;
     text-align: center;
 }
@@ -755,14 +762,15 @@ input::-webkit-inner-spin-button {
     width: 900px;
     border: solid 2px gray;
     background-color: white;
-    box-shadow: 0 4px 20px 0 rgb(0,0,0,0.2);
+    box-shadow: 0 4px 20px 0 rgb(0, 0, 0, 0.2);
     border-radius: 25px;
     height: 900px;
     margin-left: 510px;
     margin-top: 60px;
 }
 
-.opcao-sexoM,.opcao-sexoF{
+.opcao-sexoM,
+.opcao-sexoF {
     display: none;
 }
 
@@ -797,7 +805,7 @@ input::-webkit-inner-spin-button {
 
 .altura {
     position: absolute;
-    border : none;
+    border: none;
     border-bottom: solid 1px black;
     font-size: 20px;
     background: none;
@@ -864,11 +872,11 @@ input::-webkit-inner-spin-button {
     margin-top: 50px;
     margin-left: 360px;
     width: 1200px;
-    height: 500px;  
+    height: 500px;
     border-radius: 25px;
     border: solid 1px white;
     background-color: rgba(255, 255, 255, 0.644);
-    box-shadow: 0 1px 5px 0 rgb(0,0,0,0.3);
+    box-shadow: 0 1px 5px 0 rgb(0, 0, 0, 0.3);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -879,7 +887,7 @@ input::-webkit-inner-spin-button {
 .email-painel-dados {
     color: red;
     margin-top: 20px;
-    font-size : 20px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -975,7 +983,7 @@ input::-webkit-inner-spin-button {
 
 .div-opcao-sexo {
     position: absolute;
-    color:rgb(80, 80, 80);
+    color: rgb(80, 80, 80);
     background: none;
     color: black;
     border: 0;
@@ -993,7 +1001,7 @@ input::-webkit-inner-spin-button {
 }
 
 .div-opcao-sexo label {
-    font-size :20px;
+    font-size: 20px;
 }
 
 .botao-submit-dados {
@@ -1011,7 +1019,7 @@ input::-webkit-inner-spin-button {
 }
 
 .botao-submit-dados:hover {
-    transform:scale(1.3, 1.1)
+    transform: scale(1.3, 1.1)
 }
 
 .flex-container-perfil {
@@ -1085,4 +1093,347 @@ input::-webkit-inner-spin-button {
 .sexo-perfil {
     padding: 10px;
     border-bottom: solid 1px rgb(201, 201, 201);
+}
+
+.flex-container-dieta {
+    margin-top: 5%;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.texto-montar-dieta {
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+
+.botao-realizar-login-dieta {
+    height: 85px;
+    width: 250px;
+    text-align: center;
+    color: white;
+    background-color: greenyellow;
+    border: 0;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+    box-shadow: 0 4px 20px 0 rgb(0, 0, 0, 0.3);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.botao-realizar-login-dieta:hover {
+    transform: scale(1.08);
+    border: solid 2px green;
+}
+
+.flex-progresso {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+
+.imagem-progresso {
+    width: 30%;
+}
+
+.texto-montar-dieta-1 {
+    color: green;
+}
+
+.flex-opcoes-dieta {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-left: 15%;
+    height: 300px;
+}
+
+.cuttingbox-div {
+    margin-top: 1%;
+    width: 200px;
+    height: 80%;
+    background-color: white;
+    border: solid 1px grey;
+    box-shadow: 0px 4px 10px 0px rgb(0, 0, 0, 0.2);
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.cuttingbox-div:hover {
+    border: solid 1px green;
+}
+
+.cuttingbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    cursor: pointer;
+}
+
+.cuttingbox-div input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.texto-cutting {
+    text-align: center;
+    width: 200px;
+    font-size: 25px;
+    color: rgb(69, 223, 69);
+}
+
+.subtexto-cutting {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20%;
+    color: rgb(165, 165, 165);
+    transition: all 0.3s ease-out;
+}
+
+.cuttingbox img {
+    align-self: center;
+    height: 30%;
+    margin-left: 6%;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.bulkingbox-div {
+    margin-top: 1%;
+    width: 200px;
+    height: 80%;
+    background-color: white;
+    border: solid 1px grey;
+    box-shadow: 0px 4px 10px 0px rgb(0, 0, 0, 0.2);
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.bulkingbox-div:hover {
+    border : solid 1px green;
+}
+
+.bulkingbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    cursor: pointer;
+}
+
+.bulkingbox-div input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.texto-bulking {
+    text-align: center;
+    width: 200px;
+    font-size: 25px;
+    color: rgb(69, 223, 69);
+}
+
+.subtexto-bulking {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20%;
+    color: rgb(165, 165, 165);
+    transition: all 0.3s ease-out;
+}
+
+.bulkingbox img {
+    align-self: center;
+    height: 30%;
+    margin-left: 6%;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.manterpesobox-div {
+    margin-top: 1%;
+    width: 200px;
+    height: 80%;
+    background-color: white;
+    border: solid 1px grey;
+    box-shadow: 0px 4px 10px 0px rgb(0, 0, 0, 0.2);
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.manterpesobox-div:hover {
+    border: solid 1px green;
+}
+
+.manterpesobox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    cursor: pointer;
+}
+
+.manterpesobox-div input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.texto-manterpeso {
+    text-align: center;
+    width: 200px;
+    font-size: 25px;
+    color: rgb(69, 223, 69);
+}
+
+.subtexto-manterpeso {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20%;
+    color: rgb(165, 165, 165);
+    transition: all 0.3s ease-out;
+}
+
+.manterpesobox img {
+    align-self: center;
+    height: 30%;
+    margin-left: 6%;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+[type=radio]:checked ~ span {
+    color: green;
+    font-size: 12px;
+}
+
+.botoes-dieta {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-top: 5%;
+    order: 2;
+}
+
+.botao-next {
+    cursor: pointer;
+    background-color: rgb(123, 233, 123);
+    font-size: 25px;
+    color: white;
+    padding: 5px 30px;
+    border: solid 1px green;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.botao-next:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 10px 0px rgb(0, 0, 0, 0.2);
+}
+
+.botao-previous {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgb(241, 84, 72);
+    font-size: 25px;
+    color: white;
+    padding: 5px 30px;
+    border: solid 1px rgb(136, 17, 17);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.botao-previous:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 10px 0px rgb(0, 0, 0, 0.2);
+}
+
+.flex-dados-dieta {
+    margin-top: 5%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+    border: solid 1px grey;
+    box-shadow: 0px 4px 10px 0px rgb(0, 0, 0, 0.2);
+    border-radius: 25px;
+    height: 300px;
+}
+
+.montardieta-atividades {
+    height: 70%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.montardieta-atividades label {
+    color: rgb(4, 66, 4);
+    font-weight: bold;
+}
+
+.calcularTMB-montardieta {
+    order: 3;
+    font-size: 20px;
+    color: white;
+    margin-top: 3%;
+    border: 0;
+    cursor: pointer;
+    background-color: green;
+    border-radius: 25px;
+    padding: 1% 2%;
+    transition: all 0.2s ease;
+}
+
+.calcularTMB-montardieta:hover {
+    box-shadow: 0px 2px 5px 0px rgb(0, 0, 0, 0.2);
+}
+
+.resultadoTMB-montardieta {
+    font-size: 25px;
+    color: rgb(69, 223, 69);
+    text-align: center;
+}
+
+.div-infos-montardieta {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    width: 70%;
+    height: 200px;
 }
