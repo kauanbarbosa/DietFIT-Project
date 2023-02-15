@@ -1431,9 +1431,150 @@ input::-webkit-inner-spin-button {
 
 .div-infos-montardieta {
     display: flex; 
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
     order: 1;
     width: 70%;
-    height: 200px;
+    height: 230px;
+    margin-left: 15%;
+    margin-top: 3%;
+    border: solid 2px grey;
+    border-radius: 35px;
+    box-shadow: inset 0px 2px 5px 0px rgb(0 0 0 / 20%);
+}
+
+.caldieta {
+    color: rgb(0, 104, 0);
+    margin-top: 2%;
+    height: 115px;
+    text-align: center;
+}
+
+.qtd-caldieta {
+    color: #090;
+    font-size: 50px;
+}
+
+.div-dados-macros-dieta {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 100%;
+    height: 115px;
+    float: bottom;
+}
+
+.gasto-montar-dieta {
+    color:rgb(4, 66, 4);
+    font-weight: bold;
+}
+
+.proteina-montar-dieta {
+    color: rgb(71, 126, 20);
+    font-weight: bold;
+}
+
+.gordura-montar-dieta {
+    color: rgb(71, 126, 20);
+    font-weight: bold;
+}
+
+.carbo-montar-dieta {
+    color: rgb(71, 126, 20);
+    font-weight: bold;
+}
+
+.flex-montar-macros {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+}
+
+.div-macro-proteina {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 33%;
+    height: 50%;
+}
+
+.div-macro-gordura {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 33%;
+    height: 50%;
+}
+
+
+.div-macro-carboidrato {
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 33%;
+    height: 50%;
+}
+
+.range-proteina{
+	-webkit-appearance:none;
+	width:200px;
+	height:4px;
+	border-radius:5px;
+	background-color:#1ab84a;
+	outline:none;
+}
+.range-proteina::-webkit-slider-thumb{
+	-webkit-appearance:none;
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	background-color:#1ab84a;
+}
+#spanProteina{
+	width:110px;
+	height:30px;
+	background-color:green;
+	color:#fff;
+	border-radius:3px;
+	text-align:center;
+	line-height:30px;
+}
+
+.range-gordura{
+	-webkit-appearance:none;
+	width:200px;
+	height:4px;
+	border-radius:5px;
+	background-color:#1ab84a;
+	outline:none;
+}
+.range-gordura::-webkit-slider-thumb{
+	-webkit-appearance:none;
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	background-color:#1ab84a;
+}
+#spanGordura{
+	width:110px;
+	height:30px;
+	background-color:green;
+	color:#fff;
+	border-radius:3px;
+	text-align:center;
+	line-height:30px;
+}
+
+#spanCarboidrato {
+    color: green;
 }

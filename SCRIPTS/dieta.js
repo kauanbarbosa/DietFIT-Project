@@ -1,16 +1,15 @@
 function sessaoDieta() {
     const sessaoString = sessionStorage.getItem('_usuario_logado')
     console.log(sessaoString)
-    if (sessaoString !== null)
-    {  
+    if (sessaoString !== null) {
         const div = document.querySelector('.flex-container-dieta')
         div.remove()
         montarDieta()
-        return 
+        return
     }
     else {
-        const sessao = JSON.parse(sessaoString) 
-        
+        const sessao = JSON.parse(sessaoString)
+
         const div = document.querySelector('.options-header')
         const botaoCadastrar = document.querySelector('.botao-header-cadastro')
         const botaoLogin = document.querySelector('.botao-header-login')
@@ -60,7 +59,7 @@ function montarDieta() {
     Progress.setAttribute('class', 'flex-progresso')
     progresso.setAttribute('src', '../imgs/progresso-1.png')
     progresso.setAttribute('class', 'imagem-progresso')
-    
+
     texto1.setAttribute('class', 'texto-montar-dieta-1')
     texto1.innerHTML = `Selecione o objetivo da sua dieta...`
     Progress.appendChild(progresso)
@@ -136,15 +135,15 @@ function montarDieta() {
     main.appendChild(Progress)
     main.appendChild(opcoes)
     main.appendChild(divButton)
-    
+
 }
 
 function gastoCalorico() {
     this.objetivo = document.querySelector('input[name="objetivo"]:checked')
 
-    if (objetivo === null ) {
+    if (objetivo === null) {
         alert('Selecione o seu objetivo!')
-        return 
+        return
     } else {
         objetivo = this.objetivo.value
     }
@@ -174,19 +173,19 @@ function gastoCalorico() {
     const selectAtividade = document.createElement('select')
     selectAtividade.setAttribute('name', 'atividade')
     selectAtividade.setAttribute('id', 'atividade')
-    const op1 = document.createElement('option') 
+    const op1 = document.createElement('option')
     op1.setAttribute('value', 'sedentario')
     op1.innerHTML = 'Sedentário (pouco ou nenhum exercício)'
-    const op2 = document.createElement('option') 
+    const op2 = document.createElement('option')
     op2.setAttribute('value', 'levementeativo')
     op2.innerHTML = 'Levemente Ativo (exercício leve 1 a 3 dias por semana)'
-    const op3 = document.createElement('option') 
+    const op3 = document.createElement('option')
     op3.setAttribute('value', 'moderadamenteativo')
     op3.innerHTML = 'Moderadamente Ativo (execício moderado 3 a 5 dias por semana)'
-    const op4 = document.createElement('option') 
+    const op4 = document.createElement('option')
     op4.setAttribute('value', 'altamenteativo')
     op4.innerHTML = 'Altamente ativo (exercício pesado de 5 a 6 dias por semana)'
-    const op5 = document.createElement('option') 
+    const op5 = document.createElement('option')
     op5.setAttribute('value', 'extremamenteativo')
     op5.innerHTML = 'Extremamente ativo (exercício pesado diariamente e até 2 vezes por dia)'
     selectAtividade.appendChild(op1)
@@ -220,7 +219,7 @@ function TMB() {
     if (sessao.sexo = 'masculino') // sexo masculino
     {
         switch (taxaAtividade) {
-            case 'sedentario':  
+            case 'sedentario':
                 resultadoTMB = TMBmasculino(1.2, sessao.peso, sessao.altura, sessao.idade)
                 break;
             case 'levementeativo':
@@ -235,12 +234,12 @@ function TMB() {
             case 'extremamenteativo':
                 resultadoTMB = TMBmasculino(1.9, sessao.peso, sessao.altura, sessao.idade)
                 break;
-            default :
+            default:
                 console.log('erro');
         }
     } else {
         switch (taxaAtividade) {
-            case 'sedentario': 
+            case 'sedentario':
                 resultadoTMB = TMBfeminino(1.2, sessao.peso, sessao.altura, sessao.idade)
                 break;
             case 'levementeativo':
@@ -270,18 +269,17 @@ function TMB() {
 }
 
 function TMBmasculino(fator, peso, altura, idade) {
-    const TMB = fator * ( 66 + ((13.7 * peso) + (5 * altura) - (6.8 * idade)))
+    const TMB = fator * (66 + ((13.7 * peso) + (5 * altura) - (6.8 * idade)))
     return TMB
 }
 
 function TMBfeminino(fator, peso, altura, idade) {
-    const TMB = fator * ( 655 + ((9.6 * peso) + (1.8 * altura) - (4.7 * idade)))
+    const TMB = fator * (655 + ((9.6 * peso) + (1.8 * altura) - (4.7 * idade)))
     return TMB
 }
 
 function divisaoMacros() {
-    if (document.querySelector('#resultadoTMB-montardieta'))
-    {
+    if (document.querySelector('#resultadoTMB-montardieta')) {
         this.TMB = resultadoTMB
 
     } else {
@@ -299,14 +297,17 @@ function divisaoMacros() {
     const div = document.querySelector('.flex-dados-dieta')
     div.setAttribute('class', 'flex-montar-macros')
     div.innerText = ''
-    
+
+    const div2 = document.createElement('div')
+    div2.setAttribute('class', 'div-dados-macros-dieta')
+
     const img = document.querySelector('.imagem-progresso')
     img.setAttribute('src', '../imgs/progresso-3.png')
-    
+
     const texto = document.querySelector('.texto-montar-dieta-1')
     texto.innerHTML = `Vamos calcular alguns macros...`
 
-    
+
     const calDieta = document.createElement('span')
     calDieta.setAttribute('class', 'caldieta')
     const quantidade = document.createElement('h1')
@@ -314,8 +315,8 @@ function divisaoMacros() {
     quantidade.innerHTML = `${caloriasDieta} Kcal`
     calDieta.innerHTML = `Calorias da dieta :`
     calDieta.appendChild(quantidade)
-    
-    
+
+
     const macroProteinaDiv = document.createElement('div')
     macroProteinaDiv.setAttribute('class', 'div-macro-proteina')
     macroProteinaDiv.setAttribute('id', 'div-macro-proteina')
@@ -330,7 +331,7 @@ function divisaoMacros() {
     macroProteina.setAttribute('type', 'range')
     macroProteina.setAttribute('id', 'macroproteina')
     macroProteina.setAttribute('name', 'macro-proteina')
-    macroProteina.setAttribute('min', '1') 
+    macroProteina.setAttribute('min', '1')
     macroProteina.setAttribute('max', '2')
     macroProteina.setAttribute('step', '0.1')
     macroProteina.setAttribute('value', '1.6')
@@ -338,7 +339,7 @@ function divisaoMacros() {
     macroProteinaDiv.appendChild(Proteina)
     macroProteinaDiv.appendChild(macroProteina)
     macroProteinaDiv.appendChild(macroProteinaSpan)
-    
+
     const macroGorduraDiv = document.createElement('div')
     macroGorduraDiv.setAttribute('class', 'div-macro-gordura')
     macroGorduraDiv.setAttribute('id', 'div-macro-gordura')
@@ -353,7 +354,7 @@ function divisaoMacros() {
     macroGordura.setAttribute('type', 'range')
     macroGordura.setAttribute('id', 'macrogordura')
     macroGordura.setAttribute('name', 'macro-gordura')
-    macroGordura.setAttribute('min', '0.3') 
+    macroGordura.setAttribute('min', '0.3')
     macroGordura.setAttribute('max', '1')
     macroGordura.setAttribute('step', '0.1')
     macroGordura.setAttribute('value', '0.5')
@@ -361,7 +362,7 @@ function divisaoMacros() {
     macroGorduraDiv.appendChild(Gordura)
     macroGorduraDiv.appendChild(macroGordura)
     macroGorduraDiv.appendChild(macroGorduraSpan)
-    
+
     const macroCarboidratoDiv = document.createElement('div')
     macroCarboidratoDiv.setAttribute('class', 'div-macro-carboidrato')
     macroCarboidratoDiv.setAttribute('id', 'div-macro-carboidrato')
@@ -374,40 +375,43 @@ function divisaoMacros() {
     const macroCarboidratoSpan = document.createElement('span')
     macroCarboidratoSpan.setAttribute('id', 'spanCarboidrato')
     macroCarboidratoSpan.innerHTML = 'A quantidade de carboidrato da sua dieta é a quantidade restante <br> de gramas retirando a de gordura e de proteína!'
-    macroCarboidratoDiv.appendChild(Carboidrato) 
-    macroCarboidratoDiv.appendChild(macroCarboidratoSpan) 
-    macroCarboidratoDiv.appendChild(macroCarboidratoSpan2) 
-    
+    macroCarboidratoDiv.appendChild(Carboidrato)
+    macroCarboidratoDiv.appendChild(macroCarboidratoSpan)
+    macroCarboidratoDiv.appendChild(macroCarboidratoSpan2)
+
     const gasto = document.createElement('span')
     gasto.setAttribute('class', 'gasto-montar-dieta')
-    gasto.innerHTML = `Gasto calórico : ${TMB.toFixed(2)}`
+    gasto.innerHTML = `Gasto calórico : ${TMB.toFixed(2)} kcal `
 
     const divBotoes = document.querySelector('.botoes-dieta')
+    const botaoNext = document.querySelector('.botao-next')
+    botaoNext.setAttribute('onclick', 'revisao()')
 
     div.appendChild(macroProteinaDiv)
     div.appendChild(macroGorduraDiv)
     div.appendChild(macroCarboidratoDiv)
     divInfos.appendChild(calDieta)
-    divInfos.appendChild(gasto)
+    div2.appendChild(gasto)
+    divInfos.appendChild(div2)
     main.appendChild(divInfos)
     main.appendChild(div)
     main.appendChild(divBotoes)
-}   
+    updateValor()
+}
 
 function dietaKcal(gasto, objetivo) {
     let resultado
-    console.log(objetivo, gasto)
-    switch(objetivo) {
-        case 'cutting' : 
+    switch (objetivo) {
+        case 'cutting':
             resultado = gasto * 0.82
             break;
-        case 'bulking' :
+        case 'bulking':
             resultado = gasto * 1.09
             break;
-        case 'manterpeso' :
+        case 'manterpeso':
             resultado = gasto
             break;
-        default : 
+        default:
             resultado = gasto
     }
     return Math.round(resultado.toFixed(2))
@@ -438,6 +442,9 @@ function updateDados() {
     const div = document.querySelector('.div-infos-montardieta')
     div.innerText = ''
 
+    const div2 = document.createElement('div')
+    div2.setAttribute('class', 'div-dados-macros-dieta')
+
     const calDieta = document.createElement('span')
     calDieta.setAttribute('class', 'caldieta')
     const quantidade = document.createElement('h1')
@@ -447,21 +454,67 @@ function updateDados() {
     calDieta.appendChild(quantidade)
     const gasto = document.createElement('span')
     gasto.setAttribute('class', 'gasto-montar-dieta')
-    gasto.innerHTML = `Gasto calórico : ${TMB.toFixed(2)}`
+    gasto.innerHTML = ` Gasto calórico : ${TMB.toFixed(2)} kcal `
     const gProteina = document.createElement('span')
     gProteina.setAttribute('class', 'proteina-montar-dieta')
-    gProteina.innerHTML = `Proteína : ${gProtein} g / ${kcalProtein} kcal `
+    gProteina.innerHTML = ` Proteína : ${gProtein} g / ${kcalProtein} kcal `
     const gramaGordura = document.createElement('span')
     gramaGordura.setAttribute('class', 'gordura-montar-dieta')
-    gramaGordura.innerHTML = `Gordura : ${gGordura} g / ${kcalGordura} kcal `
+    gramaGordura.innerHTML = ` Gordura : ${gGordura} g / ${kcalGordura} kcal `
     const gCarboidrato = document.createElement('span')
     gCarboidrato.setAttribute('class', 'carbo-montar-dieta')
-    gCarboidrato.innerHTML = `Carboidrato : ${gCarbo} g / ${kcalCarbo} kcal `
+    gCarboidrato.innerHTML = ` Carboidrato : ${gCarbo} g / ${kcalCarbo} kcal `
 
     div.appendChild(calDieta)
-    div.appendChild(gasto)
-    div.appendChild(gProteina)
-    div.appendChild(gramaGordura)
-    div.appendChild(gCarboidrato)
+    div2.appendChild(gasto)
+    div2.appendChild(gProteina)
+    div2.appendChild(gramaGordura)
+    div2.appendChild(gCarboidrato)
+    div.appendChild(div2)
     return
+}
+
+function revisao() {
+    sessionStorage.setItem('_dieta', JSON.stringify({
+        objetivo: objetivo, calDieta: caloriasDieta, gastoCalorico: TMB.toFixed(2), gramaProteina: gProtein, gramaGordura: gGordura, gramaCarbo: gCarbo,
+        kcalProteina: kcalProtein, kcalGordura: kcalGordura, kcalCarbo: kcalCarbo,
+    }))
+
+    const sessaoString = sessionStorage.getItem('_dieta')
+    const sessao = JSON.parse(sessaoString)
+
+    document.querySelector('.imagem-progresso').setAttribute('src', '../imgs/progresso-4.png')
+    document.querySelector('.texto-montar-dieta-1').innerHTML = 'Revisão e finalização da dieta...'
+
+    document.querySelector('.div-infos-montardieta').remove()
+    document.querySelector('.flex-montar-macros').remove()
+
+    const infos = document.createElement('div')
+    infos.setAttribute('class', 'box-revisaoinfos')
+
+    const botoes = document.querySelector('.botoes-dieta')
+
+    const calDieta = document.createElement('span')
+    calDieta.innerHTML = `Calorias da dieta : ${sessao.calDieta} Kcal`
+    const gastoCalorico = document.createElement('span')
+    gastoCalorico.innerHTML = `Gasto calórico : ${sessao.gastoCalorico} Kcal`
+    const qtdProteina = document.createElement('span')
+    qtdProteina.innerHTML = `Gramas de proteína diária : ${sessao.gramaProteina} g`
+    const qtdGordura = document.createElement('span')
+    qtdGordura.innerHTML = `Gramas de gordura diária : ${sessao.gramaGordura} g` 
+    const qtdCarbo = document.createElement('span')
+    qtdCarbo.innerHTML = `Gramas de carboidrato diário : ${sessao.gramaCarbo} g`
+
+    const obj = document.createElement('span')
+    obj.innerHTML = `Objetivo : ${sessao.objetivo}`
+
+    infos.appendChild(calDieta)
+    infos.appendChild(gastoCalorico)
+    infos.appendChild(qtdProteina)
+    infos.appendChild(qtdGordura)
+    infos.appendChild(qtdCarbo)
+    infos.appendChild(obj)
+
+    const main = document.querySelector('.main')
+    main.insertBefore(infos, botoes)
 }
