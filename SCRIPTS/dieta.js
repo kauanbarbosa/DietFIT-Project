@@ -506,15 +506,98 @@ function revisao() {
     qtdCarbo.innerHTML = `Gramas de carboidrato diário : ${sessao.gramaCarbo} g`
 
     const obj = document.createElement('span')
-    obj.innerHTML = `Objetivo : ${sessao.objetivo}`
+    obj.setAttribute('class', 'revisao-objetivo')
+    switch(sessao.objetivo) {
+        case 'manterpeso': 
+            obj.innerHTML = `Manter Peso`
+            break;
+        case 'bulking': 
+            obj.innerHTML = `Bulking`
+            break;
+        case 'cutting' :
+            obj.innerHTML = `Cutting`
+            break;
+        default :
+            obj.innerHTML = 'Objetivo não definido!'
+    }
 
+    const spanRefeicoes = document.createElement('span')
+    spanRefeicoes.setAttribute('id', 'spanRefeicoes')
+    spanRefeicoes.innerHTML = 'Quantidade de refeições : 3 '
+    const qtdRefeicoes = document.createElement('input')
+    qtdRefeicoes.setAttribute('class', 'range-refeicoes')
+    qtdRefeicoes.setAttribute('type', 'range')
+    qtdRefeicoes.setAttribute('id', 'qtdRefeicoes')
+    qtdRefeicoes.setAttribute('name', 'qtdRefeicoes')
+    qtdRefeicoes.setAttribute('min', '3')
+    qtdRefeicoes.setAttribute('max', '6')
+    qtdRefeicoes.setAttribute('step', '1')
+    qtdRefeicoes.setAttribute('value', '3')
+    qtdRefeicoes.setAttribute('oninput', 'updateRefeicoes()')
+    const divSelecaoRefeicoes = document.createElement('div')
+    divSelecaoRefeicoes.setAttribute('class', 'divSelecaoRefeicoes')
+    divSelecaoRefeicoes.appendChild(spanRefeicoes)
+    divSelecaoRefeicoes.appendChild(qtdRefeicoes)
+
+    infos.appendChild(obj)
     infos.appendChild(calDieta)
     infos.appendChild(gastoCalorico)
     infos.appendChild(qtdProteina)
     infos.appendChild(qtdGordura)
     infos.appendChild(qtdCarbo)
-    infos.appendChild(obj)
+    infos.appendChild(divSelecaoRefeicoes)
 
+    const divCardsRefeicoes = document.createElement('div')
+    divCardsRefeicoes.setAttribute('class', 'div-cards-refeicoes')
+
+    const divInfosComp = document.createElement('div')
+    divInfosComp.setAttribute('class', 'div-infos-comp')
+    const CompCarbo = document.createElement('span')
+    CompCarbo.innerHTML = `Carboidrato : 0 g / ${sessao.gramaCarbo} g`
+    CompCarbo.setAttribute('class', 'comp-carbo')
+    const CompProt = document.createElement('span')
+    CompProt.innerHTML = `Proteína : 0 g / ${sessao.gramaProteina} g`
+    CompProt.setAttribute('class', 'comp-prot')
+    const CompGord = document.createElement('span')
+    CompGord.innerHTML = `Gordura : 0 g / ${sessao.gramaGordura} g`
+    CompGord.setAttribute('class', 'comp-gord')
+    const CompKcal = document.createElement('span')
+    CompKcal.innerHTML = `Calorias : 0 kcal / ${sessao.calDieta} kcal`
+    CompKcal.setAttribute('class', 'comp-kcal')   
+    divInfosComp.appendChild(CompKcal)
+    divInfosComp.appendChild(CompProt)
+    divInfosComp.appendChild(CompGord)
+    divInfosComp.appendChild(CompCarbo)
+    
     const main = document.querySelector('.main')
     main.insertBefore(infos, botoes)
+    main.insertBefore(divCardsRefeicoes, botoes)
+    main.insertBefore(divInfosComp, botoes)
+    updateRefeicoes()
+}
+
+function updateRefeicoes() {
+    const refeicoes = document.getElementById('qtdRefeicoes').value
+    const span = document.getElementById('spanRefeicoes')
+    span.innerHTML = `Quantidade de refeições : ${refeicoes}`
+    updateCardsRefeicoes(refeicoes)
+    return
+}
+ 
+function updateCardsRefeicoes(qtd) {
+    const div = document.querySelector('.div-cards-refeicoes')
+    if (div.querySelector('div') !== null) {
+        div.innerText = ''
+    }
+    for(let i = 0; i< qtd; i++)
+    {
+        const divRefeicao = document.createElement('div')
+        divRefeicao.setAttribute('class', 'card-refeicao')
+        const titulo = document.createElement('span')
+        titulo.setAttribute('class', 'nome-refeicao')
+        titulo.innerHTML =  `Refeição ${i+1}`
+        divRefeicao.appendChild(titulo)
+        div.appendChild(divRefeicao)
+    }
+    return 
 }
